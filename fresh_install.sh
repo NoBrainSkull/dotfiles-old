@@ -3,7 +3,7 @@
 echo "Enabling superuser commands..."
 sudo echo "done."
 
-GIT_USER = RaisonBlue
+GIT_USER=RaisonBlue
 
 # ZSH Installation
 sudo pacman -S zsh yay git kitty firfox gedit --noconfirm
