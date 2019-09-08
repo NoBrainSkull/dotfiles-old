@@ -13,10 +13,8 @@ GIT_USER=RaisonBlue
 sudo pacman -S yay --noconfirm
 
 # Install my favorite softwares
-yay -Syu zsh git kitty firefox gedit visual-studio-code-bin spotify zip unzip docker blueman \
-docker-compose duc filezilla flameshot imagemagick nitrogen telegram-desktop --noconfirm
-
-
+#yay -Syu zsh git kitty firefox gedit visual-studio-code-bin spotify zip unzip docker blueman \
+#docker-compose duc filezilla flameshot imagemagick nitrogen telegram-desktop --noconfirm
 
 # Add nuclear capacity with Zplugin shell
 sudo chsh -s /bin/zsh
