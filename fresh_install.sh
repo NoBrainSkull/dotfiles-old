@@ -13,10 +13,9 @@ GIT_USER=RaisonBlue
 sudo pacman -S yay --noconfirm
 
 # Install my favorite softwares
-softwares=('zsh' 'git' 'kitty' 'firefox' 'gedit' 'visual-studio-code-bin' 'spotify' 'zip' 'unzip' 'docker' 'blueman' 'docker-compose' 'duc' 'filezilla' 'flameshot' 'imagemagick' 'nitrogen' 'telegram-desktop')
-for s in $softwares;
-do silent_install $s;
-done
+yay -Syu zsh git kitty firefox gedit visual-studio-code-bin spotify zip unzip docker blueman \
+docker-compose duc filezilla flameshot imagemagick nitrogen telegram-desktop --noconfirm
+
 
 
 # Add nuclear capacity with Zplugin shell
@@ -29,5 +28,5 @@ curl -fsSL "https://raw.githubusercontent.com/$GIT_USER/dotfiles/master/zsh/.zpr
 curl -fsSL "https://raw.githubusercontent.com/$GIT_USER/dotfiles/master/zsh/.zaliases" > ~/.zaliases
 curl -fsSL "https://raw.githubusercontent.com/$GIT_USER/dotfiles/master/zsh/.zshrc" >> ~/.zshrc
 sudo pacman -S otf-fira-code --noconfirm
-mkdir ~/.config/fontconfig
+mkdir -p ~/.config/fontconfig
 curl -fsSL "https://raw.githubusercontent.com/$GIT_USER/dotfiles/master/font.conf" > ~/.config/fontconfig/fonts.conf
