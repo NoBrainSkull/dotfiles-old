@@ -1,0 +1,5 @@
+alias sysup='yay -Syu --noconfirm && yay -Syu --aur --noconfirm'
+alias g='git'
+alias y='yarn'
+alias src='cd ~/sources'
+alias aliases='code ~/.zaliases'
