@@ -1,11 +1,23 @@
 #!/bin/bash
 
+function silent_install() {
+  echo "Installing $1..."
+  yay -Syu --noconfirm $1 1>/dev/null 2>/dev/null
+}
+
 echo "Enabling superuser commands..."
 sudo echo "done."
 
 GIT_USER=RaisonBlue
 
-# ZSH Installation
+# Install my favorite softwares
+softwares=('zsh' 'git' 'kitty' 'firefox' 'gedit' 'visual-studio-code-bin' 'spotify' 'zip' 'unzip' 'docker' 'blueman' 'docker-compose' 'duc' 'filezilla' 'flameshot' 'imagemagick' 'nitrogen' 'telegram-desktop')
+for s in $softwares;
+do silent_install $s;
+done
+
+
+# Add nuclear capacity with Zplugin shell
 sudo pacman -S yay --noconfirm
 yay -Syu zsh git kitty firefox gedit --noconfirm
 sudo chsh -s /bin/zsh
