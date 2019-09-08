@@ -10,6 +10,8 @@ sudo echo "done."
 
 GIT_USER=RaisonBlue
 
+sudo pacman -S yay --noconfirm
+
 # Install my favorite softwares
 softwares=('zsh' 'git' 'kitty' 'firefox' 'gedit' 'visual-studio-code-bin' 'spotify' 'zip' 'unzip' 'docker' 'blueman' 'docker-compose' 'duc' 'filezilla' 'flameshot' 'imagemagick' 'nitrogen' 'telegram-desktop')
 for s in $softwares;
@@ -18,8 +20,6 @@ done
 
 
 # Add nuclear capacity with Zplugin shell
-sudo pacman -S yay --noconfirm
-yay -Syu zsh git kitty firefox gedit --noconfirm
 sudo chsh -s /bin/zsh
 sudo chsh -s /bin/zsh $USER
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
