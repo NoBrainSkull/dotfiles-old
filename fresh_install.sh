@@ -29,4 +29,4 @@ curl -fsSL "https://raw.githubusercontent.com/$GIT_USER/dotfiles/master/zsh/.zal
 curl -fsSL "https://raw.githubusercontent.com/$GIT_USER/dotfiles/master/zsh/.zshrc" >> ~/.zshrc
 sudo pacman -S otf-fira-code --noconfirm
 mkdir -p ~/.config/fontconfig
-curl -fsSL "https://raw.githubusercontent.com/$GIT_USER/dotfiles/master/font.conf" > ~/.config/fontconfig/fonts.conf
+curl -fsSL "https://raw.githubusercontent.com/$GIT_USER/dotfiles/master/fonts.conf" > ~/.config/fontconfig/fonts.conf
