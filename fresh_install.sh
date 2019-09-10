@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function silent_install() {
+function install() {
   echo "Installing $1..."
   yay -Syu --noconfirm $1 1>/dev/null 2>/dev/null
 }
@@ -13,10 +13,10 @@ GIT_USER=RaisonBlue
 sudo pacman -S yay --noconfirm
 
 # Machine optim
-yay -Syu intel-ucode systemd-swap ttf-ms-fonts 
+install intel-ucode systemd-swap ttf-ms-fonts
 
 # Video codecs
-yay -Syu exfat-utils fuse-exfat a52dec faac faad2 flac jasper \
+install exfat-utils fuse-exfat a52dec faac faad2 flac jasper \
 lame libdca libdv gst-libav libmad libmpeg2 libtheora libvorbis \
 libxv wavpack x264 xvidcore gstreamer0.10-plugins flashplugin \
 libdvdcss libdvdread libdvdnav gecko-mediaplayer dvd+rw-tools \
@@ -28,11 +28,11 @@ echo net.core.rmem_max=25000000 | sudo tee -a /etc/sysctl.d/99-sysctl.conf
 sudo sysctl -p /etc/sysctl.d/99-sysctl.conf
 
 # Printer Support
-yay -Syu manjaro-printer cups cups-filters cups-pdf cups-pk-helper system-config-printer
+install manjaro-printer cups cups-filters cups-pdf cups-pk-helper system-config-printer
 
 # Install my favorite softwares
-yay -Syu zsh git kitty firefox gedit visual-studio-code-bin spotify zip unzip docker blueman \
-docker-compose duc filezilla flameshot imagemagick nitrogen telegram-desktop vlc --noconfirm
+install zsh git kitty firefox gedit visual-studio-code-bin spotify zip unzip docker blueman \
+docker-compose duc filezilla flameshot imagemagick nitrogen telegram-desktop vlc
 
 # Add nuclear capacity with Zplugin shell
 # Zsh with zplugin; Configure special keys bindings (history, Suppr, end, etc.); 
