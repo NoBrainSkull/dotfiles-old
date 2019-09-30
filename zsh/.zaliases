@@ -1,9 +1,14 @@
 alias sysup='yay -Syu --noconfirm && yay -Syu --aur --noconfirm'
+alias l=k
 alias g='git'
 alias y='yarn'
+alias yl='yarn lint --fix'
+alias yt='yarn test'
 alias src='cd ~/sources'
 alias aliases='code ~/.zaliases'
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
+alias load_nvm='export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
+alias deploy='yarn lint --fix && yarn deploy'
